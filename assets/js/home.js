@@ -4,6 +4,7 @@ $(document).ready(function () {
     $("#top-sales__slider").owlCarousel({
         loop: true,
         margin: 20,
+        lazyLoad:true,
         autoplay: true,
         autoplayTimeout: 2500,
         autoplayHoverPause: true,
