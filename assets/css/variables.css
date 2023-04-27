@@ -1,0 +1,13 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-gold: #f9c80e;
+  --color-gold-hover: #ffdc22;
+  --color-gold-focus: #e5b400;
+
+  --color-green: #3a6e70;
+  --color-green-hover: #588c8e;
+  --color-green-focus: #265a5c;
+
+}

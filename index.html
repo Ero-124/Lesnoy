@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS styles -->
+  <link rel="stylesheet" href="./assets/vendor/aos/aos.css" />
+  <link rel="stylesheet" href="./assets/vendor/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
+  rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/common.css" />
+  <!-- Title -->
+  <title>Лесной Магазин</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <button id="back-to-top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="index.html">
+              <img src="./assets/img/main/logotype.png" alt="Лого Лесной Магазин" /></a>
+          </div>
+          <div class="header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">О компании</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Доставка и услуги</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__search">
+            <form action="#">
+              <input type="text" placeholder="Поиск" />
+              <i class="fa-solid fa-search"></i>
+            </form>
+          </div>
+          <div class="header__contacts">
+            <a href="tel:+74957747285">+7 495 774-72-85</a>
+            <span>г.Москва, ул. Адмирала Корнилова, вл7</span>
+          </div>
+          <div class="header__basket">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar  -->
+
+    <nav id="navbar">
+      <div class="container">
+        <ul class="navbar__list">
+          <li class="dropdown">
+            Обрезной пиломатериал
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брус</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брусок</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Доска обрезная</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Все</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            Строганный пиломатериал
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Все</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Европол</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Блок хаус</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Евровагонка</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Доска половая</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Имитация бруса</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Вагонка штиль сосна</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брус строганый сухой</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Доска строганая сухая</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брус клееный из сосны</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брус профилированный</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брусок строганый сухой</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            Лиственницы
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Все</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брус лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Штиль лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Планкен прямой лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Планкен косой лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Половая доска лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Обрезная доска лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Имитация бруса лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Палубная доска лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Террасная доска лиственница</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Паркетная доска лиственница</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            Строганный пиломатериал
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Все</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Фанера-1525х1525</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Фанера-2440х1220</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Оргалит</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Фанера Ламинированная</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            Фанера
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брус</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Брусок</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Доска обрезная</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Все</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">OSB</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main -->
+
+    <main id="main">
+      <!-- Main Section -->
+      <section class="main">
+        <div class="container">
+          <div class="main__wrapper">
+            <div class="main__content">
+              <h1 class="content__title">
+                Пиломатериалы из древесины для отделки и ремонта
+              </h1>
+              <h2 class="content__subtitle">
+                Выберите и рассчитайте стоимость за считанные минуты
+              </h2>
+              <a href="#" class="content__btn">Перейти в каталог</a>
+            </div>
+            <div class="main__description">
+              <div class="description__item">
+                <img src="./assets/img/main/experience1.png" alt="" />
+                <span>20 <br />
+                  лет в рынке</span>
+              </div>
+              <div class="description__item">
+                <img src="./assets/img/main/guarantee-certificate1.png" alt="" />
+                <span>100% гарантия</span>
+              </div>
+              <div class="description__item">
+                <img src="./assets/img/main/production.png" alt="" />
+                <span>Собственное производство</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__advertising">
+          <p>
+            -45% НА ИМИТАЦИЮ БРУСА ИЗ ХВОИ (АВ)! РАСПРОДАЖА ВАГОНКИ PINO
+            PREMIО! -15% НА ПАНЕЛИ ХВОЯ ШТИЛЬ!
+          </p>
+          <i class="fa-regular fa-x"></i>
+        </div>
+      </section>
+
+      <!-- Top sales -->
+      <section class="top-sales">
+        <div class="container">
+          <h2 class="top-sales__title title">ХИТ Продаж</h2>
+          <div class="owl-carousel owl-theme" id="top-sales__slider">
+            <a href="#" class="sales__slider">
+              <div class="sales__slider__img">
+                <img src="./assets/img/top-sales/top-sales_1.png" alt="" />
+                <div class="rectangle">
+                  <div class="rectangle-absolute">
+                    <img src="./assets/img/top-sales/Rectangle.png" alt="" />
+                    <span>30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sales__slider__description">
+                <div>
+                  <h4>Террасная доска</h4>
+                  <span>От 1400 ₽ </span>
+                </div>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+            <a href="#" class="sales__slider">
+              <div class="sales__slider__img">
+                <img src="./assets/img/top-sales/top-sales_1.png" alt="" />
+                <div class="rectangle">
+                  <div class="rectangle-absolute">
+                    <img src="./assets/img/top-sales/Rectangle.png" alt="" />
+                    <span>30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sales__slider__description">
+                <div>
+                  <h4>Террасная доска</h4>
+                  <span>От 1400 ₽ </span>
+                </div>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+            <a href="#" class="sales__slider">
+              <div class="sales__slider__img">
+                <img src="./assets/img/top-sales/top-sales_1.png" alt="" />
+                <div class="rectangle">
+                  <div class="rectangle-absolute">
+                    <img src="./assets/img/top-sales/Rectangle.png" alt="" />
+                    <span>30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sales__slider__description">
+                <div>
+                  <h4>Террасная доска</h4>
+                  <span>От 1400 ₽ </span>
+                </div>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+            <a href="#" class="sales__slider">
+              <div class="sales__slider__img">
+                <img src="./assets/img/top-sales/top-sales_1.png" alt="" />
+                <div class="rectangle">
+                  <div class="rectangle-absolute">
+                    <img src="./assets/img/top-sales/Rectangle.png" alt="" />
+                    <span>30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sales__slider__description">
+                <div>
+                  <h4>Террасная доска</h4>
+                  <span>От 1400 ₽ </span>
+                </div>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+            <a href="#" class="sales__slider">
+              <div class="sales__slider__img">
+                <img src="./assets/img/top-sales/top-sales_1.png" alt="" />
+                <div class="rectangle">
+                  <div class="rectangle-absolute">
+                    <img src="./assets/img/top-sales/Rectangle.png" alt="" />
+                    <span>30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sales__slider__description">
+                <div>
+                  <h4>Террасная доска</h4>
+                  <span>От 1400 ₽ </span>
+                </div>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+            <a href="#" class="sales__slider">
+              <div class="sales__slider__img">
+                <img src="./assets/img/top-sales/top-sales_1.png" alt="" />
+                <div class="rectangle">
+                  <div class="rectangle-absolute">
+                    <img src="./assets/img/top-sales/Rectangle.png" alt="" />
+                    <span>30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sales__slider__description">
+                <div>
+                  <h4>Террасная доска</h4>
+                  <span>От 1400 ₽ </span>
+                </div>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sort -->
+      <section class="sort">
+        <div class="container">
+          <h2 class="sort__title title">
+            Как выбрать сортность Сибирской лиственницы?
+          </h2>
+          <div class="sort__wrapper">
+            <div class="sort__items">
+              <div class="sort__item" data-rotation="0">
+                <h4 class="item__title">Экстра</h4>
+                <h5 class="item__subtitle">Без сучков</h5>
+              </div>
+              <div class="sort__item" data-rotation="90">
+                <h4 class="item__title">Прима</h4>
+                <h5 class="item__subtitle">
+                  Несколько живых сучков, но не более 1-2 на погонный метр
+                </h5>
+              </div>
+            </div>
+            <div class="sort__items">
+              <div class="sort__item" data-rotation="180">
+                <h4 class="item__title">AB</h4>
+                <h5 class="item__subtitle">
+                  Не больше 2-4 живых сучков (кроме выпадающих) на метр
+                </h5>
+              </div>
+              <div class="sort__item" data-rotation="270">
+                <h4 class="item__title">BC</h4>
+                <h5 class="item__subtitle">
+                  Средние и крупные сучки без ограничений по всей поверхности
+                </h5>
+              </div>
+            </div>
+            <div class="sort__img">
+              <img src="./assets/img/sort/animation.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional services -->
+      <section class="additional-services">
+        <div class="container">
+          <h2 class="additional-services__title title">
+            Дополнительные услуги
+          </h2>
+          <div class="services__items">
+            <a href="#" class="services__item right">
+              <div>
+                <h4 class="item__title">
+                  Профессиональное окрашиваниеи обработка пиломатериалов
+                </h4>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+              <img src="./assets/img/additional-services/paint-roller-green-horizontal 1.png" alt="" />
+            </a>
+            <a href="#" class="services__item right">
+              <div>
+                <h4 class="item__title">
+                  Изготовление пиломатериаловпо индивидуальным размерам
+                </h4>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+              <img src="./assets/img/additional-services/pine-wooden-boardpng 1.png" alt="" />
+            </a>
+          </div>
+          <div class="services__items">
+            <a href="#" class="services__item left">
+              <img src="./assets/img/additional-services/DAVID MOVING UZUSU transparent 2.png" alt="" />
+              <div>
+                <h4 class="item__title">Доставка в день заказа</h4>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+            <a href="#" class="services__item left">
+              <img src="./assets/img/additional-services/image 3.png" alt="" />
+              <div>
+                <h4 class="item__title">Склеивание древесины</h4>
+                <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back Call -->
+      <section class="back-call">
+        <div class="container">
+          <div class="back-call__wrapper">
+            <form action="#" class="back-call__form">
+              <label>
+                <span class="form__title">Телефон</span>
+                <input type="number" placeholder="+ 7" />
+              </label>
+              <label>
+                <span class="form__title">Имя</span>
+                <input type="text" placeholder="Имя" />
+              </label>
+              <button class="back-call__btn">Отправить</button>
+            </form>
+            <div class="back-call__content">
+              <h2>Обратный звонок</h2>
+              <p>
+                Оставьте заявку на обратный звонок на нашем сайте - мы
+                свяжемся с вами в удобное время, чтобы ответить на все ваши
+                вопросы. Просто заполните форму с вашим именем, номером
+                телефона и удобным временем звонка.
+              </p>
+              <b>Быстро и удобно!</b>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__header">
+            <div class="footer__left">
+              <a href="index.html">
+
+                <img src="./assets/img/footer/logotype_1.png" alt="Logo" />
+              </a>
+              <div class="navigation">
+                <a href="#">О компании</a>
+                <a href="#">Доставка и услуги</a>
+              </div>
+            </div>
+            <div class="footer__right">
+              <a href="tel:+74957747285">+7 495 774-72-85</a>
+              <span>г.Москва, ул. Адмирала Корниловаsd, вл7</span>
+            </div>
+          </div>
+          <nav class="footer__navigation">
+            <div class="navigation__items">
+              <h3 class="navigations__items-title">
+                <a href="#">Обрезной пиломатериал</a>
+              </h3>
+              <ul class="navigation__list">
+                <li><a href="#">Брус</a></li>
+                <li><a href="#">Брусок</a></li>
+                <li><a href="#">Доска Обрезная</a></li>
+                <li><a href="#">Доска обрезная - осина</a></li>
+              </ul>
+            </div>
+            <div class="navigation__items">
+              <h3 class="navigations__items-title">
+                <a href="#">Строганый пиломатериал</a>
+              </h3>
+              <ul class="navigation__list">
+                <li><a href="#">Брус</a></li>
+                <li><a href="#">Брусок</a></li>
+                <li><a href="#">Доска Обрезная</a></li>
+                <li><a href="#">Доска обрезная - осина</a></li>
+              </ul>
+            </div>
+            <div class="navigation__items">
+              <h3 class="navigations__items-title">
+                <a href="#">Лиственницы</a>
+              </h3>
+              <ul class="navigation__list">
+                <li><a href="#">Брус</a></li>
+                <li><a href="#">Брусок</a></li>
+                <li><a href="#">Доска Обрезная</a></li>
+                <li><a href="#">Доска обрезная - осина</a></li>
+              </ul>
+            </div>
+            <div class="navigation__items">
+              <h3 class="navigations__items-title">
+                <a href="#">Фанера</a>
+              </h3>
+              <ul class="navigation__list">
+                <li><a href="#">Брус</a></li>
+                <li><a href="#">Брусок</a></li>
+                <li><a href="#">Доска Обрезная</a></li>
+                <li><a href="#">Доска обрезная - осина</a></li>
+              </ul>
+            </div>
+            <div class="navigation__items">
+              <h3 class="navigations__items-title">
+                <a href="#">OSB</a>
+              </h3>
+            </div>
+          </nav>
+          <div class="footer__copyright">© 2001 – 2023 lesnoy-magazin.ru</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src=" ./assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/vendor/aos/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+  <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
