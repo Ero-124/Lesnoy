@@ -39,6 +39,98 @@
     </div>
 
 
+    <!-- Basket Modal ================= -->
+    <div class="basket-modal__container" id="basket-modal__container">
+      <div class="basket-modal" id="basket-modal">
+        <i class="fa-solid fa-x close-modal" id="close"></i>
+        <h2>Каталог</h2>
+        <table id="basket">
+          <tr class="basket__header">
+            <th>Продукт</th>
+            <th><span>Цена за</span> <span>1 шт / м2 / м3</span></th>
+            <th>Количество </th>
+          </tr>
+          <tr class="basket__products">
+            <td class="product__information">
+              <img src="./assets/img/top-sales/top-sales01.png" alt="">
+              Террасная доска
+            </td>
+            <td class="product__price">1400 ₽</td>
+            <td class="product__count">
+              <div class="pricing-range">
+                <span class="min button">
+                  -
+                </span>
+                <input type="text" readonly value="1" maxlength="12" />
+                <span class="plus button">
+                  +
+                </span>
+              </div>
+              <i class="fa-solid fa-x"></i>
+            </td>
+          </tr>
+          <tr class="basket__products">
+            <td class="product__information">
+              <img src="./assets/img/top-sales/top-sales01.png" alt="">
+              Террасная доска
+            </td>
+            <td class="product__price">1400 ₽</td>
+            <td class="product__count">
+              <div class="pricing-range">
+                <span class="min button">
+                  -
+                </span>
+                <input type="text" readonly value="1" maxlength="12" />
+                <span class="plus button">
+                  +
+                </span>
+              </div>
+              <i class="fa-solid fa-x"></i>
+            </td>
+          </tr>
+          <tr class="basket__products">
+            <td class="product__information">
+              <img src="./assets/img/top-sales/top-sales01.png" alt="">
+              Террасная доска
+            </td>
+            <td class="product__price">1400 ₽</td>
+            <td class="product__count">
+              <div class="pricing-range">
+                <span class="min button">
+                  -
+                </span>
+                <input type="text" readonly value="1" maxlength="12" />
+                <span class="plus button">
+                  +
+                </span>
+              </div>
+              <i class="fa-solid fa-x"></i>
+            </td>
+          </tr>
+          <tr class="basket__products">
+            <td class="product__information">
+              <img src="./assets/img/top-sales/top-sales01.png" alt="">
+              Террасная доска
+            </td>
+            <td class="product__price">1400 ₽</td>
+            <td class="product__count">
+              <div class="pricing-range">
+                <span class="min button">
+                  -
+                </span>
+                <input type="text" readonly value="1" maxlength="12" />
+                <span class="plus button">
+                  +
+                </span>
+              </div>
+              <i class="fa-solid fa-x"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
     <!-- Header -->
     <header id="header">
       <div class="container">
@@ -50,7 +142,6 @@
                 <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
               </picture>
             </a>
-
           </div>
           <div class="header__nav">
             <ul class="nav__list">
@@ -74,7 +165,7 @@
               <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
             </div>
           </div>
-          <div class="header__basket">
+          <div class="header__basket" id="open-modal">
             <img src="./assets/img/icons/Cart.svg" alt="">
           </div>
           <div class="header__burger"></div>

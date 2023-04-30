@@ -167,6 +167,166 @@
   width: 40px
 }
 
+
+.basket-modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s all;
+  z-index: 126;
+}
+
+.basket-modal__container.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.basket-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 95%;
+  max-height: 80vh;
+  margin-bottom: 25px;
+  padding: 70px 100px;
+  transition: 0.5s all;
+  border-radius: 10px;
+  overflow: auto;
+  z-index: 1000;
+  box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.basket-modal::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+
+.basket-modal h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+}
+
+.basket-modal.show {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s all;
+}
+
+.basket-modal .close-modal {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+#basket {
+  width: 100%;
+}
+
+.basket__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+}
+
+.product__information {
+  flex: 0 0 50%;
+}
+
+.basket__header th:nth-child(1) {
+  flex: 0 1 37%;
+}
+
+.basket__header th:nth-child(2) {
+  flex: 0 1 29%;
+}
+
+.basket__header th:nth-child(3) {
+  text-align: right;
+  flex: 0 0 30%;
+}
+
+.basket__header th {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%
+}
+
+.basket__products {
+  background: #FFFFFF;
+  box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.basket-modal .product__information img {
+  width: 138px;
+  margin-right: 20px;
+}
+
+.basket-modal .product__information {
+  display: flex;
+  align-items: center;
+}
+
+.basket-modal .product__count {
+  display: flex;
+  align-items: center;
+}
+
+.basket-modal .product__count i {
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+@media (max-width: 1200px) {
+  .basket-modal {
+    padding: 50px 50px;
+  }
+}
+
+@media (max-width: 1024.99px) {
+  .product__information {
+    flex: 0 0 58%;
+  }
+  .basket__header th:nth-child(1) {
+    flex: 0 1 60%;
+  }
+  
+  .basket__header th:nth-child(2) {
+    flex: 0 1 44%;
+  }
+  
+  .basket__header th:nth-child(3) {
+    text-align: center;
+    flex: 0 0 23%;
+  }
+}
+
+
+
+
 .back-call__title,
 .header__burger,
 .owl-theme .owl-dots .owl-dot {
@@ -876,7 +1036,11 @@
 }
 
 .product__info {
-  flex: 0 0 40%
+  flex: 0 0 50%;
+}
+
+.product__price {
+  flex: 1 1 auto;
 }
 
 .small-title {
@@ -1395,11 +1559,12 @@
   .characteristics__sort {
     margin-bottom: 25px;
   }
+
   .characteristics__sizes select,
   .characteristics__sort select,
   .small-title,
   .product__description p,
- 
+
   .pricing-range input,
   .pricing-range .button {
     font-size: 18px;
@@ -1495,6 +1660,8 @@
   #header .header__basket img {
     width: 30px
   }
+
+
 
   .header__burger {
     width: 28px;
@@ -1724,6 +1891,7 @@
   .small-title {
     font-weight: 500;
   }
+
   .product .container {
     padding: 0 24px;
   }
@@ -2206,6 +2374,7 @@
   .main__wrapper .slider-content {
     top: 32px
   }
+
   .main__description {
     flex-wrap: wrap;
     justify-content: center
@@ -2282,7 +2451,8 @@
     margin-bottom: 17px;
   }
 
-  .characteristics__sizes, .characteristics__sort {
+  .characteristics__sizes,
+  .characteristics__sort {
     margin-bottom: 0;
   }
 
@@ -2325,19 +2495,21 @@
     font-size: 25px;
     margin-bottom: 10px;
   }
+
   .pricing__info .radio__items label,
   .radio__item input,
   .radio__item label {
     font-size: 14px;
   }
 
-  .pricing__info .radio__items .radio__item{
+  .pricing__info .radio__items .radio__item {
     margin-right: 15px;
   }
 
   .radio__item input {
     margin-right: 9px;
   }
+
   .product__content {
     margin-bottom: 24px;
   }
@@ -2350,9 +2522,10 @@
     font-size: 16px;
   }
 
-  .product__description p{
+  .product__description p {
     font-size: 14px;
   }
+
   .product__btn {
     font-size: 16px;
     margin-top: 24px;

@@ -101,7 +101,7 @@ let menuItemsAdded = false;
 
 function addMenuItems() {
   if (menuItemsAdded) {
-    return; 
+    return;
   }
 
   /* Header Items */
@@ -126,7 +126,7 @@ function addMenuItems() {
   navbarList.insertAdjacentElement('afterbegin', createLiElement);
   createLiElement.insertAdjacentElement('afterend', createLiElement2);
 
-  menuItemsAdded = true; 
+  menuItemsAdded = true;
 }
 
 function removeMenuItems() {
@@ -162,3 +162,26 @@ function handleResize() {
 
 window.addEventListener('resize', handleResize);
 handleResize();
+
+
+
+const open = document.getElementById("open-modal");
+const modal__container = document.getElementById("basket-modal__container");
+const modal = document.getElementById("basket-modal");
+const close = document.getElementById("close");
+const body = document.querySelector('body');
+
+open.addEventListener('click', function () {
+  modal__container.classList.add('show');
+  modal.classList.add('show');
+  body.classList.add('lock');
+})
+
+document.addEventListener('click', (e) => {
+  if (e.target === modal__container || e.target === close) {
+    modal__container.classList.remove('show');
+    modal__container.classList.remove('show');
+    modal.classList.remove('show');
+    body.classList.remove('lock');
+  }
+});
