@@ -6,13 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- CSS styles -->
-  <link rel="stylesheet" href="./assets/vendor/aos/aos.css" />
-  <link rel="stylesheet" href="./assets/vendor/fontawesome-free/css/all.min.css" />
-  <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="./assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css"
+    integrity="sha512-qKRrPbwf0yKAsKZGGfiNjmd66a7GtkLhLqTqH9boYbDPgUQmDw0mGXfC3HlkbEFEw3HjNmSaS9SR/d07ZXOUVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
-  rel="stylesheet" />
+    rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/common.css" />
   <!-- Title -->
@@ -22,7 +29,15 @@
 <body>
   <div class="wrapper">
 
-    <button id="back-to-top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+    <!-- Fixed elements -->
+    <div id="discount">
+      <p>
+        -45% НА ИМИТАЦИЮ БРУСА ИЗ ХВОИ (АВ)! РАСПРОДАЖА ВАГОНКИ PINO
+        PREMIО! -15% НА ПАНЕЛИ ХВОЯ ШТИЛЬ!
+      </p>
+      <i class="fa-regular fa-x"></i>
+    </div>
 
 
     <!-- Header -->
@@ -31,7 +46,12 @@
         <div class="header__wrapper">
           <div class="header__logo">
             <a href="index.html">
-              <img src="./assets/img/main/logotype.png" alt="Лого Лесной Магазин" /></a>
+              <picture>
+                <source media="(min-width:1024.99px)" srcset="./assets/img/main/logotype.png">
+                <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
+              </picture>
+            </a>
+
           </div>
           <div class="header__nav">
             <ul class="nav__list">
@@ -46,16 +66,19 @@
           <div class="header__search">
             <form action="#">
               <input type="text" placeholder="Поиск" />
-              <i class="fa-solid fa-search"></i>
+              <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
             </form>
           </div>
           <div class="header__contacts">
-            <a href="tel:+74957747285">+7 495 774-72-85</a>
-            <span>г.Москва, ул. Адмирала Корнилова, вл7</span>
+            <div>
+              <a href="tel:+74957747285">+7 495 774-72-85</a>
+              <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
+            </div>
           </div>
           <div class="header__basket">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="./assets/img/icons/Cart.svg" alt="">
           </div>
+          <div class="header__burger"></div>
         </div>
       </div>
     </header>
@@ -168,27 +191,6 @@
             </ul>
           </li>
           <li class="dropdown">
-            Строганный пиломатериал
-            <i class="fa-solid fa-caret-down"></i>
-            <ul class="dropdown__list">
-              <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Все</a>
-              </li>
-              <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Фанера-1525х1525</a>
-              </li>
-              <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Фанера-2440х1220</a>
-              </li>
-              <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Оргалит</a>
-              </li>
-              <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Фанера Ламинированная</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
             Фанера
             <i class="fa-solid fa-caret-down"></i>
             <ul class="dropdown__list">
@@ -221,40 +223,102 @@
     <main id="main">
       <!-- Main Section -->
       <section class="main">
-        <div class="container">
-          <div class="main__wrapper">
-            <div class="main__content">
-              <h1 class="content__title">
-                Пиломатериалы из древесины для отделки и ремонта
-              </h1>
-              <h2 class="content__subtitle">
-                Выберите и рассчитайте стоимость за считанные минуты
-              </h2>
-              <a href="#" class="content__btn">Перейти в каталог</a>
+        <div class="main__wrapper">
+          <div class="owl-carousel owl-theme" id="main-slider">
+            <div class="slider-item">
+              <div class="slider-item__photo">
+                <img src="./assets/img/main/slider-1.jpg" alt="">
+              </div>
+              <div class="slider-content">
+                <div class="main__content">
+                  <h1 class="content__title">
+                    Пиломатериалы из древесины для отделки и ремонта
+                  </h1>
+                  <h3 class="content__subtitle">
+                    Выберите и рассчитайте стоимость за считанные минуты
+                  </h3>
+                  <a href="#" class="content__btn">Перейти в каталог</a>
+                </div>
+                <div class="main__description">
+                  <div class="description__item">
+                    <img src="./assets/img/main/experience1.png" alt="" />
+                    <span>20 <br />
+                      лет в рынке</span>
+                  </div>
+                  <div class="description__item">
+                    <img src="./assets/img/main/guarantee-certificate1.png" alt="" />
+                    <span>100% гарантия</span>
+                  </div>
+                  <div class="description__item">
+                    <img src="./assets/img/main/production.png" alt="" />
+                    <span>Собственное производство</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="main__description">
-              <div class="description__item">
-                <img src="./assets/img/main/experience1.png" alt="" />
-                <span>20 <br />
-                  лет в рынке</span>
+            <div class="slider-item">
+              <div class="slider-item__photo">
+                <img src="./assets/img/main/slider-2.jpg" alt="">
               </div>
-              <div class="description__item">
-                <img src="./assets/img/main/guarantee-certificate1.png" alt="" />
-                <span>100% гарантия</span>
+              <div class="slider-content">
+                <div class="main__content">
+                  <h1 class="content__title">
+                    Пиломатериалы из древесины для отделки и ремонта
+                  </h1>
+                  <h3 class="content__subtitle">
+                    Выберите и рассчитайте стоимость за считанные минуты
+                  </h3>
+                  <a href="#" class="content__btn">Перейти в каталог</a>
+                </div>
+                <div class="main__description">
+                  <div class="description__item">
+                    <img src="./assets/img/main/experience1.png" alt="" />
+                    <span>20 <br />
+                      лет в рынке</span>
+                  </div>
+                  <div class="description__item">
+                    <img src="./assets/img/main/guarantee-certificate1.png" alt="" />
+                    <span>100% гарантия</span>
+                  </div>
+                  <div class="description__item">
+                    <img src="./assets/img/main/production.png" alt="" />
+                    <span>Собственное производство</span>
+                  </div>
+                </div>
               </div>
-              <div class="description__item">
-                <img src="./assets/img/main/production.png" alt="" />
-                <span>Собственное производство</span>
+            </div>
+            <div class="slider-item">
+              <div class="slider-item__photo">
+                <img src="./assets/img/main/slider-3.jpg" alt="">
+              </div>
+              <div class="slider-content">
+                <div class="main__content">
+                  <h1 class="content__title">
+                    Пиломатериалы из древесины для отделки и ремонта
+                  </h1>
+                  <h3 class="content__subtitle">
+                    Выберите и рассчитайте стоимость за считанные минуты
+                  </h3>
+                  <a href="#" class="content__btn">Перейти в каталог</a>
+                </div>
+                <div class="main__description">
+                  <div class="description__item">
+                    <img src="./assets/img/main/experience1.png" alt="" />
+                    <span>20 <br />
+                      лет в рынке</span>
+                  </div>
+                  <div class="description__item">
+                    <img src="./assets/img/main/guarantee-certificate1.png" alt="" />
+                    <span>100% гарантия</span>
+                  </div>
+                  <div class="description__item">
+                    <img src="./assets/img/main/production.png" alt="" />
+                    <span>Собственное производство</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="main__advertising">
-          <p>
-            -45% НА ИМИТАЦИЮ БРУСА ИЗ ХВОИ (АВ)! РАСПРОДАЖА ВАГОНКИ PINO
-            PREMIО! -15% НА ПАНЕЛИ ХВОЯ ШТИЛЬ!
-          </p>
-          <i class="fa-regular fa-x"></i>
         </div>
       </section>
 
@@ -384,28 +448,32 @@
           <div class="sort__wrapper">
             <div class="sort__items">
               <div class="sort__item" data-rotation="0">
-                <h4 class="item__title">Экстра</h4>
-                <h5 class="item__subtitle">Без сучков</h5>
+                <h3 class="item__title">Экстра</h3>
+                <h4 class="item__subtitle">Без сучков</h4>
+                <img class="item__img" src="./assets/img/sort/extra.png" alt="">
               </div>
               <div class="sort__item" data-rotation="90">
-                <h4 class="item__title">Прима</h4>
-                <h5 class="item__subtitle">
+                <h3 class="item__title">Прима</h3>
+                <h4 class="item__subtitle">
                   Несколько живых сучков, но не более 1-2 на погонный метр
-                </h5>
+                </h4>
+                <img class="item__img" src="./assets/img/sort/prima.png" alt="">
               </div>
             </div>
             <div class="sort__items">
               <div class="sort__item" data-rotation="180">
-                <h4 class="item__title">AB</h4>
-                <h5 class="item__subtitle">
+                <h3 class="item__title">AB</h3>
+                <h4 class="item__subtitle">
                   Не больше 2-4 живых сучков (кроме выпадающих) на метр
-                </h5>
+                </h4>
+                <img class="item__img" src="./assets/img/sort/ab.png" alt="">
               </div>
               <div class="sort__item" data-rotation="270">
-                <h4 class="item__title">BC</h4>
-                <h5 class="item__subtitle">
+                <h3 class="item__title">BC</h3>
+                <h4 class="item__subtitle">
                   Средние и крупные сучки без ограничений по всей поверхности
-                </h5>
+                </h4>
+                <img class="item__img" src="./assets/img/sort/bc.png" alt="">
               </div>
             </div>
             <div class="sort__img">
@@ -415,7 +483,32 @@
         </div>
       </section>
 
+
+
+      <!-- Blog section -->
+      <section class="blog-section">
+        <div class="container">
+          <div class="blog-section__wrapper">
+            <div class="blog-section__video">
+              <video controls>
+                <source src="./assets/img/video/y2mate.com - 1 Minute Timer_1080pFHR.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="blog-section__content">
+              <h2>Как делать что-то чтоб здесь было БЛОГ</h2>
+              <p>Наша компания имеет собственную лесопильную базу, где мы используем только лучшие сорта древесины,
+                производимые из лесов, управляемых на основе принципов устойчивого лесоразведения. Мы стремимся
+                предоставлять нашим клиентам высококачественные пиломатериалы, которые отвечают самым строгим стандартам
+                качества.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <!-- Additional services -->
+
       <section class="additional-services">
         <div class="container">
           <h2 class="additional-services__title title">
@@ -429,7 +522,8 @@
                 </h4>
                 <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
               </div>
-              <img src="./assets/img/additional-services/paint-roller-green-horizontal 1.png" alt="" />
+              <img class="services__item-img w-100"
+                src="./assets/img/additional-services/paint-roller-green-horizontal 1.png" alt="" />
             </a>
             <a href="#" class="services__item right">
               <div>
@@ -438,19 +532,21 @@
                 </h4>
                 <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
               </div>
-              <img src="./assets/img/additional-services/pine-wooden-boardpng 1.png" alt="" />
+              <img class="services__item-img" src="./assets/img/additional-services/pine-wooden-boardpng 1.png"
+                alt="" />
             </a>
           </div>
           <div class="services__items">
             <a href="#" class="services__item left">
-              <img src="./assets/img/additional-services/DAVID MOVING UZUSU transparent 2.png" alt="" />
+              <img class="services__item-img"
+                src="./assets/img/additional-services/DAVID MOVING UZUSU transparent 2.png" alt="" />
               <div>
                 <h4 class="item__title">Доставка в день заказа</h4>
                 <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
               </div>
             </a>
             <a href="#" class="services__item left">
-              <img src="./assets/img/additional-services/image 3.png" alt="" />
+              <img class="services__item-img" src="./assets/img/additional-services/image 3.png" alt="" />
               <div>
                 <h4 class="item__title">Склеивание древесины</h4>
                 <img class="arrow-right" src="./assets/img/icons/arrow-right.png" alt="">
@@ -460,14 +556,20 @@
         </div>
       </section>
 
+
+
+
+
+
       <!-- Back Call -->
       <section class="back-call">
         <div class="container">
           <div class="back-call__wrapper">
             <form action="#" class="back-call__form">
+              <h2 class="back-call__title">Обратный звонок</h2>
               <label>
                 <span class="form__title">Телефон</span>
-                <input type="number" placeholder="+ 7" />
+                <input type="text" placeholder="+ 7" />
               </label>
               <label>
                 <span class="form__title">Имя</span>
@@ -488,6 +590,8 @@
           </div>
         </div>
       </section>
+
+
     </main>
 
     <!-- Footer -->
@@ -497,8 +601,7 @@
           <div class="footer__header">
             <div class="footer__left">
               <a href="index.html">
-
-                <img src="./assets/img/footer/logotype_1.png" alt="Logo" />
+                <img src="./assets/img/main/logotype_white.png" alt="Logo" />
               </a>
               <div class="navigation">
                 <a href="#">О компании</a>
@@ -507,14 +610,14 @@
             </div>
             <div class="footer__right">
               <a href="tel:+74957747285">+7 495 774-72-85</a>
-              <span>г.Москва, ул. Адмирала Корниловаsd, вл7</span>
+              <address><span>г.Москва,</span> ул. Адмирала Корнилова, вл7</address>
             </div>
           </div>
           <nav class="footer__navigation">
             <div class="navigation__items">
-              <h3 class="navigations__items-title">
+              <h4 class="navigations__items-title">
                 <a href="#">Обрезной пиломатериал</a>
-              </h3>
+              </h4>
               <ul class="navigation__list">
                 <li><a href="#">Брус</a></li>
                 <li><a href="#">Брусок</a></li>
@@ -523,9 +626,9 @@
               </ul>
             </div>
             <div class="navigation__items">
-              <h3 class="navigations__items-title">
+              <h4 class="navigations__items-title">
                 <a href="#">Строганый пиломатериал</a>
-              </h3>
+              </h4>
               <ul class="navigation__list">
                 <li><a href="#">Брус</a></li>
                 <li><a href="#">Брусок</a></li>
@@ -534,10 +637,14 @@
               </ul>
             </div>
             <div class="navigation__items">
-              <h3 class="navigations__items-title">
+              <h4 class="navigations__items-title">
                 <a href="#">Лиственницы</a>
-              </h3>
+              </h4>
               <ul class="navigation__list">
+                <li><a href="#">Брус</a></li>
+                <li><a href="#">Брусок</a></li>
+                <li><a href="#">Доска Обрезная</a></li>
+                <li><a href="#">Доска обрезная - осина</a></li>
                 <li><a href="#">Брус</a></li>
                 <li><a href="#">Брусок</a></li>
                 <li><a href="#">Доска Обрезная</a></li>
@@ -545,9 +652,9 @@
               </ul>
             </div>
             <div class="navigation__items">
-              <h3 class="navigations__items-title">
+              <h4 class="navigations__items-title">
                 <a href="#">Фанера</a>
-              </h3>
+              </h4>
               <ul class="navigation__list">
                 <li><a href="#">Брус</a></li>
                 <li><a href="#">Брусок</a></li>
@@ -556,9 +663,15 @@
               </ul>
             </div>
             <div class="navigation__items">
-              <h3 class="navigations__items-title">
+              <h4 class="navigations__items-title">
                 <a href="#">OSB</a>
-              </h3>
+              </h4>
+              <ul class="navigation__list">
+                <li><a href="#">Брус</a></li>
+                <li><a href="#">Брусок</a></li>
+                <li><a href="#">Доска Обрезная</a></li>
+                <li><a href="#">Доска обрезная - осина</a></li>
+              </ul>
             </div>
           </nav>
           <div class="footer__copyright">© 2001 – 2023 lesnoy-magazin.ru</div>
@@ -568,10 +681,16 @@
   </div>
 
   <!-- Scripts -->
-  <script src=" ./assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="./assets/vendor/aos/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
+    integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="./assets/js/home.js"></script>
   <script src="./assets/js/main.js"></script>
