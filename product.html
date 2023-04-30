@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS styles -->
-    <link rel="stylesheet" href="./assets/vendor/aos/aos.css" />
-    <link rel="stylesheet" href="./assets/vendor/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css"
+        integrity="sha512-qKRrPbwf0yKAsKZGGfiNjmd66a7GtkLhLqTqH9boYbDPgUQmDw0mGXfC3HlkbEFEw3HjNmSaS9SR/d07ZXOUVw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/common.css" />
 
     <!-- Title -->
     <title>Лесной Магазин - Продукт</title>
@@ -26,7 +28,12 @@
                 <div class="header__wrapper">
                     <div class="header__logo">
                         <a href="index.html">
-                            <img src="./assets/img/main/logotype.png" alt="Лого Лесной Магазин" /></a>
+                            <picture>
+                                <source media="(min-width:1024.99px)" srcset="./assets/img/main/logotype.png">
+                                <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
+                            </picture>
+                        </a>
+
                     </div>
                     <div class="header__nav">
                         <ul class="nav__list">
@@ -41,16 +48,19 @@
                     <div class="header__search">
                         <form action="#">
                             <input type="text" placeholder="Поиск" />
-                            <i class="fa-solid fa-search"></i>
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
                         </form>
                     </div>
                     <div class="header__contacts">
-                        <a href="tel:+74957747285">+7 495 774-72-85</a>
-                        <span>г.Москва, ул. Адмирала Корнилова, вл7</span>
+                        <div>
+                            <a href="tel:+74957747285">+7 495 774-72-85</a>
+                            <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
+                        </div>
                     </div>
                     <div class="header__basket">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <img src="./assets/img/icons/Cart.svg" alt="">
                     </div>
+                    <div class="header__burger"></div>
                 </div>
             </div>
         </header>
@@ -276,10 +286,10 @@
                                         <div class="characteristics__sort">
                                             <span class="small-title">Сорт</span>
                                             <select name="" id="">
-                                                <option value="">1 200x200x2000</option selected>
-                                                <option value="">1 400x200x2000</option>
-                                                <option value="">1 600x200x2000</option>
-                                                <option value="">1 800x200x2000</option>
+                                                <option value="">Экстра</option selected>
+                                                <option value="">Прима</option>
+                                                <option value="">AB</option>
+                                                <option value="">BC</option>
                                             </select>
                                         </div>
                                     </div>
@@ -394,8 +404,7 @@
                     <div class="footer__header">
                         <div class="footer__left">
                             <a href="index.html">
-
-                                <img src="./assets/img/footer/logotype_1.png" alt="Logo" />
+                                <img src="./assets/img/main/logotype_white.png" alt="Logo" />
                             </a>
                             <div class="navigation">
                                 <a href="#">О компании</a>
@@ -404,14 +413,14 @@
                         </div>
                         <div class="footer__right">
                             <a href="tel:+74957747285">+7 495 774-72-85</a>
-                            <span>г.Москва, ул. Адмирала Корниловаsd, вл7</span>
+                            <address><span>г.Москва,</span> ул. Адмирала Корнилова, вл7</address>
                         </div>
                     </div>
                     <nav class="footer__navigation">
                         <div class="navigation__items">
-                            <h3 class="navigations__items-title">
+                            <h4 class="navigations__items-title">
                                 <a href="#">Обрезной пиломатериал</a>
-                            </h3>
+                            </h4>
                             <ul class="navigation__list">
                                 <li><a href="#">Брус</a></li>
                                 <li><a href="#">Брусок</a></li>
@@ -420,9 +429,9 @@
                             </ul>
                         </div>
                         <div class="navigation__items">
-                            <h3 class="navigations__items-title">
+                            <h4 class="navigations__items-title">
                                 <a href="#">Строганый пиломатериал</a>
-                            </h3>
+                            </h4>
                             <ul class="navigation__list">
                                 <li><a href="#">Брус</a></li>
                                 <li><a href="#">Брусок</a></li>
@@ -431,10 +440,14 @@
                             </ul>
                         </div>
                         <div class="navigation__items">
-                            <h3 class="navigations__items-title">
+                            <h4 class="navigations__items-title">
                                 <a href="#">Лиственницы</a>
-                            </h3>
+                            </h4>
                             <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
                                 <li><a href="#">Брус</a></li>
                                 <li><a href="#">Брусок</a></li>
                                 <li><a href="#">Доска Обрезная</a></li>
@@ -442,9 +455,9 @@
                             </ul>
                         </div>
                         <div class="navigation__items">
-                            <h3 class="navigations__items-title">
+                            <h4 class="navigations__items-title">
                                 <a href="#">Фанера</a>
-                            </h3>
+                            </h4>
                             <ul class="navigation__list">
                                 <li><a href="#">Брус</a></li>
                                 <li><a href="#">Брусок</a></li>
@@ -453,9 +466,15 @@
                             </ul>
                         </div>
                         <div class="navigation__items">
-                            <h3 class="navigations__items-title">
+                            <h4 class="navigations__items-title">
                                 <a href="#">OSB</a>
-                            </h3>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
                         </div>
                     </nav>
                     <div class="footer__copyright">© 2001 – 2023 lesnoy-magazin.ru</div>
@@ -465,8 +484,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src=" ./assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="./assets/vendor/aos/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
+        integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./assets/js/product.js"></script>

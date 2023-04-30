@@ -4,8 +4,12 @@ var swiper = new Swiper("#product-slider__thumbs", {
   freeMode: true,
   watchSlidesProgress: true,
   breakpoints: {
-    640: {
+    0: {
       slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    532: {
+      slidesPerView: 3,
       spaceBetween: 10,
     },
     768: {
