@@ -8,14 +8,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/main/favicon.png">
     <!-- CSS styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css"
-        integrity="sha512-qKRrPbwf0yKAsKZGGfiNjmd66a7GtkLhLqTqH9boYbDPgUQmDw0mGXfC3HlkbEFEw3HjNmSaS9SR/d07ZXOUVw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
@@ -216,12 +210,61 @@
             <section class="blog">
                 <div class="container">
                     <h2>Блог</h2>
-                    <div class="blog__wrapper">
-                        <img src="./assets/img/blog/blog05.jpg" alt="">
-                        <img src="./assets/img/blog/blog01.jpg" alt="">
-                        <img src="./assets/img/blog/blog02.jpg" alt="">
-                        <img src="./assets/img/blog/blog03.jpg" alt="">
-                        <img src="./assets/img/blog/blog04.jpg" alt="">
+                    <div class="blog__wrapper owl-carousel owl-theme" id="blog-slider">
+                        <div>
+                            <img src="./assets/img/blog/blog01.jpg" alt="">
+                            <p>"Лесная эстетика": творческий подход к использованию пиломатериалов в декорировании</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog02.jpg" alt="">
+                            <p>"Древесина для жизни": как использовать пиломатериалы для строительства и дизайна</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog03.jpg" alt="">
+                            <p>"Деревянные конструкции": примеры креативного использования древесины в архитектуре и
+                                дизайне интерьеров</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog04.jpg" alt="">
+                            <p>"Деревянные конструкции": примеры креативного использования древесины в архитектуре и
+                                дизайне интерьеров</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog05.jpg" alt="">
+                            <p>"Древесина в саду": советы по использованию пиломатериалов для озеленения и обустройства
+                                сада и приусадебного участка.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="articles-lumber">
+                <div class="container">
+                    <div class="articles-lumber__wrapper owl-carousel owl-theme" id="articles-lumber-slider">
+                        <div>
+                            <img src="./assets/img/blog/blog01.jpg" alt="">
+                            <p>"Лесная эстетика": творческий подход к использованию пиломатериалов в декорировании</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog02.jpg" alt="">
+                            <p>"Древесина для жизни": как использовать пиломатериалы для строительства и дизайна</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog03.jpg" alt="">
+                            <p>"Деревянные конструкции": примеры креативного использования древесины в архитектуре и
+                                дизайне интерьеров</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog04.jpg" alt="">
+                            <p>"Деревянные конструкции": примеры креативного использования древесины в архитектуре и
+                                дизайне интерьеров</p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/blog/blog05.jpg" alt="">
+                            <p>"Древесина в саду": советы по использованию пиломатериалов для озеленения и обустройства
+                                сада и приусадебного участка.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -347,7 +390,12 @@
 
     <!-- Scripts -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/blog.js"></script>
 </body>
 
 </html>
