@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/main/favicon.png">
     <!-- CSS styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css"
-        integrity="sha512-qKRrPbwf0yKAsKZGGfiNjmd66a7GtkLhLqTqH9boYbDPgUQmDw0mGXfC3HlkbEFEw3HjNmSaS9SR/d07ZXOUVw=="
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+        integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Title -->
-    <title>Лесной Магазин - Продукт</title>
+    <title>Лесной Магазин | Катало товаров</title>
 </head>
 
 <body>
     <div class="wrapper">
+
+
+
         <!-- Header -->
         <header id="header">
             <div class="container">
@@ -33,12 +43,11 @@
                                 <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
                             </picture>
                         </a>
-
                     </div>
                     <div class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a href="#" class="nav__link">О компании</a>
+                                <a href="about-us.html" class="nav__link">О компании</a>
                             </li>
                             <li class="nav__item">
                                 <a href="#" class="nav__link">Доставка и услуги</a>
@@ -57,9 +66,13 @@
                             <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
                         </div>
                     </div>
-                    <div class="header__basket">
-                        <img src="./assets/img/icons/Cart.svg" alt="">
-                    </div>
+                    <a href="basket.html" class="header__basket">
+                        <picture>
+                            <source media="(min-width:1024.99px)" srcset="./assets/img/icons/Cart.svg">
+                            <img src="./assets/img/icons/cart-white.svg" alt="Cart Icon" />
+                        </picture>
+                        <span class="count">10</span>
+                    </a>
                     <div class="header__burger"></div>
                 </div>
             </div>
@@ -201,80 +214,175 @@
         </nav>
 
         <!-- Main -->
-        <main>
+        <main id="main" class="product-main">
 
+
+            <!-- Modal Filter -->
+
+            <div class="product-modal__container">
+                <div class="product-modal">
+                    <i class="fa-solid fa-x close-modal" id="close"></i>
+                    <aside class="product__filter">
+                        <div class="product__container">
+                            <b class="small-title">Фильтр</b>
+                            <form action="#" class="filter__form">
+                                <div class="filter__price">
+                                    <span class="small-title">Цена:</span>
+                                    <div class="price__fields">
+                                        <div class="price__field">
+                                            <span>0₽</span>
+                                        </div>
+                                        <div class="price__field">
+                                            <span>30000₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress__bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="range__input">
+                                    <input class="range-min" type="range" min="0" max="30000" value="0" step="100">
+                                    <input class="range-max" type="range" min="0" max="30000" value="30000" step="100">
+                                </div>
+                                <div class="filter__material">
+                                    <span class="small-title">Материал:</span>
+                                    <div class="choose__field">
+                                        <input type="checkbox" name="material" id="larch" checked>
+                                        <label for="larch"><span class="ad">Лиственница</span></label>
+
+                                        <input type="checkbox" name="material" id="pine">
+                                        <label for="pine"><span>Сосна</span> </label>
+
+                                        <input type="checkbox" name="material" id="sibirian-larch">
+                                        <label for="sibirian-larch"><span>Сибирская лиственница</span></label>
+
+                                        <input type="checkbox" name="material" id="spruce">
+                                        <label for="spruce"><span>Ель</span> </label>
+                                    </div>
+                                </div>
+                                <div class="filter__selects">
+                                    <div class="filter__sizes">
+                                        <span class="small-title">Размер (мм)</span>
+                                        <select name="" id="">
+                                            <option value="">1 200x200x2000</option selected>
+                                            <option value="">1 400x200x2000</option>
+                                            <option value="">1 600x200x2000</option>
+                                            <option value="">1 800x200x2000</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter__sort">
+                                        <span class="small-title">Сорт:</span>
+                                        <div class="choose__field col">
+                                            <input type="checkbox" name="sort" id="extra" checked>
+                                            <label for="extra"><span>Экстра</span></label>
+
+                                            <input type="checkbox" name="sort" id="prima">
+                                            <label for="prima"><span>Прима</span></label>
+
+                                            <input type="checkbox" name="sort" id="ab">
+                                            <label for="ab"><span>AB</span> </label>
+
+                                            <input type="checkbox" name="sort" id="bc">
+                                            <label for="bc"><span>BC</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__humidity">
+                                    <span class="humidity__title small-title">Влажность:</span>
+                                    <span class="humidity__value">Естественная</span>
+                                </div>
+                                <div class="product__pricing">
+                                    <div class="pricing__info">
+                                        <span class="small-title">Цена за:</span>
+                                        <div class="radio__items">
+                                            <div class="radio__item">
+                                                <input type="radio" id="piece" name="price-per" checked>
+                                                <label for="piece">шт</label>
+                                            </div>
+                                            <div class="radio__item">
+                                                <input type="radio" id="m2" name="price-per">
+                                                <label for="m2">м2</label>
+                                            </div>
+                                            <div class="radio__item">
+                                                <input type="radio" id="m3" name="price-per">
+                                                <label for="m3">м3</label>
+                                            </div>
+                                        </div>
+                                        <span class="pricing-for-one">260 ₽</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- Product -->
             <section class="product">
+                <div class="product__content">
+                    <div id="product-slider" class="owl-carousel owl-theme">
+                        <div class="slider-item">
+                            <div class="product__description">
+                                <h1>БРУС</h1>
+                                <p>Хотите создать привлекательную и уютную террасу для отдыха и развлечений
+                                    на своем участке? Тогда вам обязательно понадобится качественная
+                                    террасная доска! В нашем интернет-магазине вы найдете большой выбор
+                                    досок для террас, включая древесные, композитные и пластиковые
+                                    материалы.</p>
+                            </div>
+                            <img src="./assets/img/product/brus.png" />
+                        </div>
+                        <div class="bg">
+                            <div class="product__description">
+                                <span>Брус</span>
+                            </div>
+                            <img src="./assets/img/product/product01.jpg" />
+                        </div>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="product__wrapper">
-                        <div class="product__content">
-                            <div id="product-slider" class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
+                        <aside class="product__filter">
+                            <div class="product__container">
+                                <b class="small-title">Фильтр</b>
+                                <form action="#" class="filter__form">
+                                    <div class="filter__price">
+                                        <span class="small-title">Цена:</span>
+                                        <div class="price__fields">
+                                            <div class="price__field">
+                                                <span>0₽</span>
+                                            </div>
+                                            <div class="price__field">
+                                                <span>30000₽</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
+                                    <div class="progress__bar">
+                                        <div class="progress"></div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
+                                    <div class="range__input">
+                                        <input class="range-min" type="range" min="0" max="30000" value="0" step="100">
+                                        <input class="range-max" type="range" min="0" max="30000" value="30000"
+                                            step="100">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div thumbsSlider="" class="swiper" id="product-slider__thumbs">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/img/top-sales/top-sales_1.png" />
-                                    </div>
-                                </div>
-                            </div>
+                                    <div class="filter__material">
+                                        <span class="small-title">Материал:</span>
+                                        <div class="choose__field">
+                                            <input type="checkbox" name="material" id="larch" checked>
+                                            <label for="larch"><span class="ad">Лиственница</span></label>
 
-                        </div>
-                        <div class="product__info">
-                            <h1>Террасная доска</h1>
-                            <div class="product__characteristics">
-                                <h3>Выберите характеристики для расчета цены</h3>
-                                <span class="small-title">Тип:</span>
-                                <form action="#" class="characteristics__form">
-                                    <div class="characteristics__types radio__items">
-                                        <div class="characteristics__type radio__item">
-                                            <input type="radio" id="larch" name="type">
-                                            <label for="larch">Лиственница</label>
-                                        </div>
-                                        <div class="characteristics__type radio__item">
-                                            <input type="radio" id="pine" name="type">
-                                            <label for="pine">Сосна</label>
-                                        </div>
-                                        <div class="characteristics__type radio__item">
-                                            <input type="radio" id="spruce" name="type" disabled>
-                                            <label for="spruce">Ель</label>
+                                            <input type="checkbox" name="material" id="pine">
+                                            <label for="pine"><span>Сосна</span> </label>
+
+                                            <input type="checkbox" name="material" id="sibirian-larch">
+                                            <label for="sibirian-larch"><span>Сибирская лиственница</span></label>
+
+                                            <input type="checkbox" name="material" id="spruce">
+                                            <label for="spruce"><span>Ель</span> </label>
                                         </div>
                                     </div>
-                                    <div class="characteristics__selects">
-                                        <div class="characteristics__sizes">
+                                    <div class="filter__selects">
+                                        <div class="filter__sizes">
                                             <span class="small-title">Размер (мм)</span>
                                             <select name="" id="">
                                                 <option value="">1 200x200x2000</option selected>
@@ -283,17 +391,24 @@
                                                 <option value="">1 800x200x2000</option>
                                             </select>
                                         </div>
-                                        <div class="characteristics__sort">
-                                            <span class="small-title">Сорт</span>
-                                            <select name="" id="">
-                                                <option value="">Экстра</option selected>
-                                                <option value="">Прима</option>
-                                                <option value="">AB</option>
-                                                <option value="">BC</option>
-                                            </select>
+                                        <div class="filter__sort">
+                                            <span class="small-title">Сорт:</span>
+                                            <div class="choose__field col">
+                                                <input type="checkbox" name="sort" id="extra" checked>
+                                                <label for="extra"><span>Экстра</span></label>
+
+                                                <input type="checkbox" name="sort" id="prima">
+                                                <label for="prima"><span>Прима</span></label>
+
+                                                <input type="checkbox" name="sort" id="ab">
+                                                <label for="ab"><span>AB</span> </label>
+
+                                                <input type="checkbox" name="sort" id="bc">
+                                                <label for="bc"><span>BC</span></label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="characteristics__humidity">
+                                    <div class="filter__humidity">
                                         <span class="humidity__title small-title">Влажность:</span>
                                         <span class="humidity__value">Естественная</span>
                                     </div>
@@ -302,7 +417,7 @@
                                             <span class="small-title">Цена за:</span>
                                             <div class="radio__items">
                                                 <div class="radio__item">
-                                                    <input type="radio" id="piece" name="price-per">
+                                                    <input type="radio" id="piece" name="price-per" checked>
                                                     <label for="piece">шт</label>
                                                 </div>
                                                 <div class="radio__item">
@@ -316,70 +431,208 @@
                                             </div>
                                             <span class="pricing-for-one">260 ₽</span>
                                         </div>
-                                        <div class="pricing__price">
-                                            <strong>12 000 ₽</strong>
-                                            <div class="pricing-range">
-                                                <span class="min button">
-                                                    -
-                                                </span>
-                                                <input type="text" readonly value="1" maxlength="12" />
-                                                <span class="plus button">
-                                                    +
-                                                </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </aside>
+                        <div class="product-catalog">
+                            <div class="product-catalog--mobile">
+                                <h3 class="product-catalog__title">Каталог</h3>
+                                <img src="./assets/img/icons/filter.svg" class="filter-img" />
+                            </div>
+                            <div class="product-catalog__wrapper">
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/doska.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="product__btn" type="submit">В Корзину</button>
-                                </form>
+                                </div>
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/01.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска с шлифовкой и что то такой</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/doska.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска с шлифовкой и что то такой</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/doska.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска с шлифовкой и что то такой</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/doska.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска с шлифовкой и что то такой</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/doska.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска с шлифовкой и что то такой</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-catalog__column">
+                                    <div class="products-catalog__item">
+                                        <div class="item__photo">
+                                            <img src="./assets/img/product/doska.jpg" alt="">
+                                            <div class="item__sort">
+                                                <span>Экстра</span>
+                                                <span>Сосна</span>
+                                            </div>
+                                        </div>
+                                        <div class="item__info">
+                                            <div class="item__info-title">
+                                                <h2 class="info__title">Террасная доска с шлифовкой и что то такой</h2>
+                                                <strong>1400 ₽</strong>
+                                            </div>
+                                            <div class="item__info-photo">
+                                                <picture>
+                                                    <source media="(min-width:767.99px)"
+                                                        srcset="./assets/img/icons/cart-plus.svg">
+                                                    <img src="./assets/img/icons/cart-plus-white.svg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product__description">
-                        <h2>Описание</h2>
-                        <p> Хотите создать привлекательную и уютную террасу для отдыха и развлечений на своем
-                            участке? Тогда вам обязательно понадобится качественная террасная доска! В нашем
-                            интернет-магазине вы найдете большой выбор досок для террас, включая древесные,
-                            композитные и пластиковые материалы.
-                        </p>
-                        <p>
-                            Наши древесные доски для террас изготовлены из высококачественных пород дерева,
-                            таких
-                            как дуб, кедр и сосна, и имеют защитное покрытие от гниения и влаги. Композитные
-                            доски
-                            для террас, изготовленные из смеси пластика и древесных волокон, являются прочными,
-                            долговечными и не требуют регулярного технического обслуживания.
-                        </p>
-                        <p>
-                            Наша пластиковая террасная доска представлена в различных текстурах и цветах, и
-                            может
-                            быть легко установлена без дополнительной обработки.
-                        </p>
-                        <p>
-                            У нас вы найдете все необходимое для создания уютной и привлекательной террасы,
-                            включая
-                            аксессуары для установки и обслуживания досок. Оформите заказ на нашем сайте и
-                            наслаждайтесь комфортом и красотой вашей новой террасы!
-                        </p>
                     </div>
                 </div>
             </section>
 
 
-            <section class="back-call">
+            <!-- Back Call -->
+            <section class="call bg">
                 <div class="container">
-                    <div class="back-call__wrapper">
-                        <form action="#" class="back-call__form">
-                            <label>
-                                <span class="form__title">Телефон</span>
-                                <input type="number" placeholder="+ 7" />
-                            </label>
+                    <div class="call__wrapper">
+                        <form action="#" class="call__form">
+                            <h2 class="call__title">Обратный звонок</h2>
                             <label>
                                 <span class="form__title">Имя</span>
                                 <input type="text" placeholder="Имя" />
                             </label>
-                            <button class="back-call__btn">Отправить</button>
+                            <label>
+                                <span class="form__title">Телефон</span>
+                                <input type="number" placeholder="+ 7" />
+                            </label>
+                            <button class="call__btn">Отправить</button>
                         </form>
-                        <div class="back-call__content">
+                        <div class="call__content">
                             <h2>Обратный звонок</h2>
                             <p>
                                 Оставьте заявку на обратный звонок на нашем сайте - мы
@@ -392,7 +645,6 @@
                     </div>
                 </div>
             </section>
-
         </main>
 
 
@@ -484,13 +736,15 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
-        integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+        integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/product.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script  src="./assets/js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/main/favicon.png">
+    <!-- Title -->
+    <title>Лесной Магазин | Корзина товаров</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <picture>
+                                <source media="(min-width:1024.99px)" srcset="./assets/img/main/logotype.png">
+                                <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="about-us.html" class="nav__link">О компании</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Доставка и услуги</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__search">
+                        <form action="#">
+                            <input type="text" placeholder="Поиск" />
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </form>
+                    </div>
+                    <div class="header__contacts">
+                        <div>
+                            <a href="tel:+74957747285">+7 495 774-72-85</a>
+                            <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
+                        </div>
+                    </div>
+                    <a href="product.html" class="header__basket">
+                        <picture>
+                            <source media="(min-width:1024.99px)" srcset="./assets/img/icons/Cart.svg">
+                            <img src="./assets/img/icons/cart-white.svg" alt="Cart Icon" />
+                        </picture>
+                        <span class="count">10</span>
+                    </a>
+                    <div class="header__burger"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navbar  -->
+
+        <nav id="navbar">
+            <div class="container">
+                <ul class="navbar__list">
+                    <li class="dropdown">
+                        Обрезной пиломатериал
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брусок</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        Строганный пиломатериал
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Европол</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Блок хаус</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Евровагонка</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска половая</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Имитация бруса</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Вагонка штиль сосна</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус строганый сухой</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска строганая сухая</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус клееный из сосны</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус профилированный</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брусок строганый сухой</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        Лиственницы
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Штиль лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Планкен прямой лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Планкен косой лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Половая доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Обрезная доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Имитация бруса лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Палубная доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Террасная доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Паркетная доска лиственница</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        Фанера
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брусок</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">OSB</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- Main -->
+        <main id="main">
+
+
+            <div class="basket-modal__container" id="basket-modal__container">
+                <div class="basket-modal" id="basket-modal">
+                    <i class="fa-solid fa-x close-modal" id="close"></i>
+
+                    <h2>Оформить заказ</h2>
+                    <div class="call order">
+                        <div class="call__wrapper">
+                            <form action="#" class="call__form">
+                                <label>
+                                    <span class="form__title">Имя</span>
+                                    <input type="text" placeholder="Имя" />
+                                </label>
+                                <label>
+                                    <span class="form__title">Телефон</span>
+                                    <input type="number" placeholder="+ 7" />
+                                </label>
+                                <label>
+                                    <span class="form__title">Электронная почта</span>
+                                    <input type="email" placeholder="info@lesnoy-magazin.ru" />
+                                </label>
+                                <span class="form__title">Способ оплаты:</span>
+                                <div class="radio__items">
+                                    <div class="radio__item">
+                                        <input type="radio" name="order" id="order-by-card">
+                                        <label for="order-by-card">Карта</label>
+                                    </div>
+                                    <div class="radio__item">
+                                        <input type="radio" name="order" id="order-by-cash">
+                                        <label for="order-by-cash">Наличные</label>
+                                    </div>
+                                </div>
+                                <button class="order__btn call__btn">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="basket">
+                <div class="container">
+                    <div class="basket__wrapper">
+                        <div class="table__container">
+                            <div class="table-for-mobile">
+                                <h2>Корзина</h2>
+                                <div class="options" title="Удалить все">
+                                    <img src="./assets/img/icons/options.svg" alt="">
+                                    <form id="">
+                                        <button id="clear-all__btn" type="submit">Удалить все</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="basket__table">
+                                <table id="basket">
+                                    <tr class="basket__header">
+                                        <th>Продукт</th>
+                                        <th>Цена</th>
+                                        <th>Количество</th>
+                                        <th>Итого</th>
+                                        <th class="options" title="Удалить все">
+                                            <img src="./assets/img/icons/options.svg" alt="">
+                                            <form id="basket__form">
+                                                <button id="clear-all__btn" type="submit">Удалить все</button>
+                                            </form>
+                                        </th>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                    <tr class="basket__products">
+                                        <td class="product__information">
+                                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                                            <div class="info__title">
+                                                <span>Террасная доска</span>
+                                                <small>1200 x 1500 x 6000</small>
+                                                <small class="for-mobile">1 400 ₽ за м²</small>
+                                            </div>
+                                        </td>
+                                        <td class="product__price">2400 ₽</td>
+                                        <td class="product__count">
+                                            <div class="pricing-range">
+                                                <button class="dec button">
+                                                    -
+                                                </button>
+                                                <input type="text" id="1" readonly value="1" maxlength="12"
+                                                    name="count" />
+                                                <button class="inc button">
+                                                    +
+                                                </button>
+                                                <span class="size">шт</span>
+                                            </div>
+                                        </td>
+                                        <td class="product__total">
+                                            4 200 ₽
+                                        </td>
+                                        <td class="remove__item"><i class="fa-solid fa-x"></i></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                            <div class="basket__item">
+                                <div class="basket__img">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+
+                            <div class="basket__total-pricing">
+                                <span>Итого: 45 200 ₽</span>
+                                <button class="basket__btn">Оформить заказ</button>
+                            </div>
+
+                        </div>
+                        <div class="call order" id="remove">
+                            <div class="call__wrapper">
+                                <form action="#" class="call__form">
+                                    <h2 class="call__title">Обратный звонок</h2>
+                                    <label>
+                                        <span class="form__title">Имя</span>
+                                        <input type="text" placeholder="Имя" />
+                                    </label>
+                                    <label>
+                                        <span class="form__title">Телефон</span>
+                                        <input type="number" placeholder="+ 7" />
+                                    </label>
+                                    <label>
+                                        <span class="form__title">Электронная почта</span>
+                                        <input type="email" placeholder="info@lesnoy-magazin.ru" />
+                                    </label>
+                                    <span class="form__title">Способ оплаты:</span>
+                                    <div class="radio__items">
+                                        <div class="radio__item">
+                                            <input type="radio" name="order" id="order-by-card">
+                                            <label for="order-by-card">Карта</label>
+                                        </div>
+                                        <div class="radio__item">
+                                            <input type="radio" name="order" id="order-by-cash">
+                                            <label for="order-by-cash">Наличные</label>
+                                        </div>
+                                    </div>
+                                    <button class="order__btn call__btn">Заказать</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Back Call -->
+            <section class="call bg">
+                <div class="container">
+                    <div class="call__wrapper">
+                        <form action="#" class="call__form">
+                            <h2 class="call__title">Обратный звонок</h2>
+                            <label>
+                                <span class="form__title">Имя</span>
+                                <input type="text" placeholder="Имя" />
+                            </label>
+                            <label>
+                                <span class="form__title">Телефон</span>
+                                <input type="number" placeholder="+ 7" />
+                            </label>
+                            <button class="call__btn">Отправить</button>
+                        </form>
+                        <div class="call__content">
+                            <h2>Обратный звонок</h2>
+                            <p>
+                                Оставьте заявку на обратный звонок на нашем сайте - мы
+                                свяжемся с вами в удобное время, чтобы ответить на все ваши
+                                вопросы. Просто заполните форму с вашим именем, номером
+                                телефона и удобным временем звонка.
+                            </p>
+                            <b>Быстро и удобно!</b>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__header">
+                        <div class="footer__left">
+                            <a href="index.html">
+                                <img src="./assets/img/main/logotype_white.png" alt="Logo" />
+                            </a>
+                            <div class="navigation">
+                                <a href="#">О компании</a>
+                                <a href="#">Доставка и услуги</a>
+                            </div>
+                        </div>
+                        <div class="footer__right">
+                            <a href="tel:+74957747285">+7 495 774-72-85</a>
+                            <address><span>г.Москва,</span> ул. Адмирала Корнилова, вл7</address>
+                        </div>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Обрезной пиломатериал</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Строганый пиломатериал</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Лиственницы</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Фанера</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">OSB</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="footer__copyright">© 2001 – 2023 lesnoy-magazin.ru</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/basket.js"></script>
+</body>
+
+</html>

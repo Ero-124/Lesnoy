@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/main/favicon.png">
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css"
+        integrity="sha512-qKRrPbwf0yKAsKZGGfiNjmd66a7GtkLhLqTqH9boYbDPgUQmDw0mGXfC3HlkbEFEw3HjNmSaS9SR/d07ZXOUVw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Title -->
+    <title>Лесной Магазин | Блог</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <picture>
+                                <source media="(min-width:1024.99px)" srcset="./assets/img/main/logotype.png">
+                                <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="about-us.html" class="nav__link">О компании</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Доставка и услуги</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__search">
+                        <form action="#">
+                            <input type="text" placeholder="Поиск" />
+                            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </form>
+                    </div>
+                    <div class="header__contacts">
+                        <div>
+                            <a href="tel:+74957747285">+7 495 774-72-85</a>
+                            <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
+                        </div>
+                    </div>
+                    <a href="basket.html" class="header__basket">
+                        <picture>
+                            <source media="(min-width:1024.99px)" srcset="./assets/img/icons/Cart.svg">
+                            <img src="./assets/img/icons/cart-white.svg" alt="Cart Icon" />
+                        </picture>
+                        <span class="count">10</span>
+                    </a>
+                    <div class="header__burger"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navbar  -->
+
+        <nav id="navbar">
+            <div class="container">
+                <ul class="navbar__list">
+                    <li class="dropdown">
+                        Обрезной пиломатериал
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брусок</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        Строганный пиломатериал
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Европол</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Блок хаус</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Евровагонка</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска половая</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Имитация бруса</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Вагонка штиль сосна</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус строганый сухой</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска строганая сухая</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус клееный из сосны</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус профилированный</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брусок строганый сухой</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        Лиственницы
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Штиль лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Планкен прямой лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Планкен косой лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Половая доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Обрезная доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Имитация бруса лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Палубная доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Террасная доска лиственница</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Паркетная доска лиственница</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        Фанера
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брус</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Брусок</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link">Все</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">OSB</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main">
+
+            <section class="blog">
+                <div class="container">
+                    <h2>Блог</h2>
+                    <div class="blog__wrapper">
+                        <img src="./assets/img/blog/blog05.jpg" alt="">
+                        <img src="./assets/img/blog/blog01.jpg" alt="">
+                        <img src="./assets/img/blog/blog02.jpg" alt="">
+                        <img src="./assets/img/blog/blog03.jpg" alt="">
+                        <img src="./assets/img/blog/blog04.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <!--  Call -->
+            <section class="call bg">
+                <div class="container">
+                    <div class="call__wrapper">
+                        <form action="#" class="call__form">
+                            <h2 class="call__title">Обратный звонок</h2>
+                            <label>
+                                <span class="form__title">Имя</span>
+                                <input type="text" placeholder="Имя" />
+                            </label>
+                            <label>
+                                <span class="form__title">Телефон</span>
+                                <input type="number" placeholder="+ 7" />
+                            </label>
+                            <button class="call__btn">Отправить</button>
+                        </form>
+                        <div class="call__content">
+                            <h2>Обратный звонок</h2>
+                            <p>
+                                Оставьте заявку на обратный звонок на нашем сайте - мы
+                                свяжемся с вами в удобное время, чтобы ответить на все ваши
+                                вопросы. Просто заполните форму с вашим именем, номером
+                                телефона и удобным временем звонка.
+                            </p>
+                            <b>Быстро и удобно!</b>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__header">
+                        <div class="footer__left">
+                            <a href="index.html">
+                                <img src="./assets/img/main/logotype_white.png" alt="Logo" />
+                            </a>
+                            <div class="navigation">
+                                <a href="#">О компании</a>
+                                <a href="#">Доставка и услуги</a>
+                            </div>
+                        </div>
+                        <div class="footer__right">
+                            <a href="tel:+74957747285">+7 495 774-72-85</a>
+                            <address><span>г.Москва,</span> ул. Адмирала Корнилова, вл7</address>
+                        </div>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Обрезной пиломатериал</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Строганый пиломатериал</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Лиственницы</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Фанера</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">OSB</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="footer__copyright">© 2001 – 2023 lesnoy-magazin.ru</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

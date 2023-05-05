@@ -1,45 +1,77 @@
-var swiper = new Swiper("#product-slider__thumbs", {
-  spaceBetween: 20,
-  slidesPerView: 5,
-  freeMode: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    0: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    532: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 15,
-    },
-    1024: {
-      slidesPerView: 5,
-      spaceBetween: 20,
-    },
-  },
+$("#product-slider").owlCarousel({
+  loop: true,
+  /* autoplay: true,
+  autoplayTimeout: 4000, */
+  nav: false,
+  dots: false,
+  items: 1,
+  singleItems: true,
+  smartSpeed: 850
 });
-var swiper2 = new Swiper("#product-slider", {
-  thumbs: {
-    swiper: swiper,
-  },
+
+$(document).ready(function () {
+  $('select').niceSelect();
 });
 
 
-$('.min').click(function () {
-  var $input = $(this).parent().find('input');
-  var count = parseInt($input.val()) - 1;
-  count = count < 1 ? 1 : count;
-  $input.val(count);
-  $input.change();
-  return false;
-});
-$('.plus').click(function () {
-  var $input = $(this).parent().find('input');
-  $input.val(parseInt($input.val()) + 1);
-  $input.change();
-  return false;
-});
+const rangeInput = document.querySelectorAll(".range__input input");
+const progress = document.querySelector(".progress__bar .progress");
+const price = document.querySelectorAll('.price__field');
+
+let priceGap = 1000;
+rangeInput.forEach(input => {
+  input.addEventListener('input', (e) => {
+    let minVal = parseInt(rangeInput[0].value);
+    let maxVal = parseInt(rangeInput[1].value);
+    if (maxVal - minVal < priceGap) {
+      if (e.target.className === 'range-min') {
+        rangeInput[0].value = maxVal - priceGap;
+      } else {
+        rangeInput[1].value = minVal + priceGap;
+      }
+    } else {
+      price[0].innerHTML = minVal + "₽";
+      price[1].innerHTML = maxVal + "₽"
+    }
+
+    progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+    progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+function initModal(btnSelector, modalContainerSelector, modalSelector, closeBtnId, threshold) {
+  const modalBtn = document.querySelector(btnSelector);
+  const modalContainer = document.querySelector(modalContainerSelector);
+  const modal = document.querySelector(modalSelector);
+  const closeBtn = document.getElementById(closeBtnId);
+
+  if (window.innerWidth > threshold) {
+      console.log('Width is greater than threshold');
+      modalContainer.remove();
+      modalBtn.remove();
+  } else {
+      modalBtn.addEventListener('click', () => {
+          modalContainer.classList.add('show');
+          modal.classList.add('show');
+          document.body.classList.add('lock');
+      })
+
+      closeBtn.addEventListener('click', () => {
+          modalContainer.classList.remove('show');
+          modal.classList.remove('show');
+          document.body.classList.remove('lock');
+      })
+  }
+}
+initModal('.filter-img', '.product-modal__container', '.product-modal', 'close', 1024.99);
+

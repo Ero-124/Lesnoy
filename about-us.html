@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/main/favicon.png">
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css"
+        integrity="sha512-qKRrPbwf0yKAsKZGGfiNjmd66a7GtkLhLqTqH9boYbDPgUQmDw0mGXfC3HlkbEFEw3HjNmSaS9SR/d07ZXOUVw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Title -->
+    <title>Лесной Магазин | О компании</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Basket Modal ================= -->
+      <!--   <div class="basket-modal__container" id="basket-modal__container">
+            <div class="basket-modal" id="basket-modal">
+                <i class="fa-solid fa-x close-modal" id="close"></i>
+                <h2>Каталог</h2>
+                <table id="basket">
+                    <tr class="basket__header">
+                        <th>Продукт</th>
+                        <th><span>Цена за</span> <span>1 шт / м2 / м3</span></th>
+                        <th>Количество </th>
+                    </tr>
+                    <tr class="basket__products">
+                        <td class="product__information">
+                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                            Террасная доска
+                        </td>
+                        <td class="product__price">1400 ₽</td>
+                        <td class="product__count">
+                            <div class="pricing-range">
+                                <button class="dec button">
+                                    -
+                                </button>
+                                <input type="text" id="1" readonly value="1" maxlength="12" name="count" />
+                                <button class="inc button">
+                                    +
+                                </button>
+                            </div>
+                            <i class="fa-solid fa-x"></i>
+                        </td>
+                    </tr>
+                    <tr class="basket__products">
+                        <td class="product__information">
+                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                            Террасная доска
+                        </td>
+                        <td class="product__price">1400 ₽</td>
+                        <td class="product__count">
+                            <div class="pricing-range">
+                                <button class="dec button">
+                                    -
+                                </button>
+                                <input type="text" id="1" readonly value="1" maxlength="12" name="count" />
+                                <button class="inc button">
+                                    +
+                                </button>
+                            </div>
+                            <i class="fa-solid fa-x"></i>
+                        </td>
+                    </tr>
+                    <tr class="basket__products">
+                        <td class="product__information">
+                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                            Террасная доска
+                        </td>
+                        <td class="product__price">1400 ₽</td>
+                        <td class="product__count">
+                            <div class="pricing-range">
+                                <button class="dec button">
+                                    -
+                                </button>
+                                <input type="text" id="1" readonly value="1" maxlength="12" name="count" />
+                                <button class="inc button">
+                                    +
+                                </button>
+                            </div>
+                            <i class="fa-solid fa-x"></i>
+                        </td>
+                    </tr>
+                    <tr class="basket__products">
+                        <td class="product__information">
+                            <img src="./assets/img/top-sales/top-sales01.png" alt="">
+                            Террасная доска
+                        </td>
+                        <td class="product__price">1400 ₽</td>
+                        <td class="product__count">
+                            <div class="pricing-range">
+                                <button class="dec button">
+                                    -
+                                </button>
+                                <input type="text" id="1" readonly value="1" maxlength="12" name="count" />
+                                <button class="inc button">
+                                    +
+                                </button>
+                            </div>
+                            <i class="fa-solid fa-x"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div> -->
+
+          <!-- Header -->
+    <header id="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__logo">
+              <a href="index.html">
+                <picture>
+                  <source media="(min-width:1024.99px)" srcset="./assets/img/main/logotype.png">
+                  <img src="./assets/img/main/logotype_white.png" alt="Лого Лесной Магазин" />
+                </picture>
+              </a>
+            </div>
+            <div class="header__nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="about-us.html" class="nav__link">О компании</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Доставка и услуги</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__search">
+              <form action="#">
+                <input type="text" placeholder="Поиск" />
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+              </form>
+            </div>
+            <div class="header__contacts">
+              <div>
+                <a href="tel:+74957747285">+7 495 774-72-85</a>
+                <address>г.Москва, ул. Адмирала Корнилова, вл7</address>
+              </div>
+            </div>
+            <a href="basket.html" class="header__basket">
+              <picture>
+                <source media="(min-width:1024.99px)" srcset="./assets/img/icons/Cart.svg">
+                <img src="./assets/img/icons/cart-white.svg" alt="Cart Icon" />
+              </picture>
+              <span class="count">10</span>
+            </a>
+            <div class="header__burger"></div>
+          </div>
+        </div>
+      </header>
+  
+      <!-- Navbar  -->
+  
+      <nav id="navbar">
+        <div class="container">
+          <ul class="navbar__list">
+            <li class="dropdown">
+              Обрезной пиломатериал
+              <i class="fa-solid fa-caret-down"></i>
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брус</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брусок</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Доска обрезная</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Все</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              Строганный пиломатериал
+              <i class="fa-solid fa-caret-down"></i>
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Все</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Европол</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Блок хаус</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Евровагонка</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Доска половая</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Имитация бруса</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Вагонка штиль сосна</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брус строганый сухой</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Доска строганая сухая</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брус клееный из сосны</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брус профилированный</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брусок строганый сухой</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              Лиственницы
+              <i class="fa-solid fa-caret-down"></i>
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Все</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брус лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Штиль лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Планкен прямой лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Планкен косой лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Половая доска лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Обрезная доска лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Имитация бруса лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Палубная доска лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Террасная доска лиственница</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Паркетная доска лиственница</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              Фанера
+              <i class="fa-solid fa-caret-down"></i>
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брус</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Брусок</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Доска обрезная</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Доска обрезная - осина</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Все</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">OSB</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+        <main id="main" class="about-us__main">
+
+            <!-- About-us -->
+            <section class="about-us__contacts">
+                <div class="container">
+                    <h1 class="about-us__contacts-title">О компании «Лесной Магазин»</h1>
+                    <div class="about-us__contacts-header">
+                        <div class="about-us__contacts-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.4676429063574!2d37.58057076251434!3d55.76873285768585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a3a9c5b261b%3A0x1f4cacef8966b513!2z0JEuINCT0YDRg9C30LjQvdGB0LrQsNGPINGD0LsuLCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjw!5e0!3m2!1sru!2sam!4v1682978287239!5m2!1sru!2sam"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="about-us__contacts-items">
+                            <div class="items__title">Контакты</div>
+                            <div class="item">
+                                <strong>Тел:</strong>
+                                <a href="tel:74957747285">+7 495 774-72-85</a>
+                            </div>
+                            <div class="item">
+                                <strong>Электронная почта:</strong>
+                                <span>info@lesnoy-magazin.ru</span>
+                            </div>
+                            <div class="item">
+                                <strong>Режим работы склада:</strong>
+                                <span>от 09:00 до 20:00 без выходных</span>
+                            </div>
+                            <div class="item">
+                                <strong>Главный склад:</strong>
+                                <span>г. Москва, ул. Адмирала Корнилова, вл7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-us__contacts-requisites">
+                        <div class="about-us__contacts-items">
+                            <div class="items__title">Реквизиты</div>
+                            <div class="item">
+                                <strong>Адрес:</strong>
+                                <span>123557, г Москва, ул Грузинская Б, 20, этаж Подв пом IV Ком 22 оф 27</span>
+                            </div>
+                            <div class="item">
+                                <strong>ИНН:</strong>
+                                <span>7723483105</span>
+                            </div>
+                            <div class="contact__item">
+                                <strong>Расчетный счет:</strong>
+                                <span>4070 2810 0100 0016 4110</span>
+                            </div>
+                            <div class="item">
+                                <strong>Кор. счет:</strong>
+                                <span>3010 1810 1452 5000 0974</span>
+                            </div>
+                            <div class="item">
+                                <strong>БИК:</strong>
+                                <span>044525974</span>
+                            </div>
+                            <div class="item">
+                                <strong>Банк:</strong>
+                                <span>АО "ТИНЬКОФФ БАНК" Г. МОСКВА</span>
+                            </div>
+                            <div class="item">
+                                <strong>Дата регистрации:</strong>
+                                <span>27.10.2016 г</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TERMS OF RETURN AND EXCHANGE -->
+            <section class="return-and-exchange-terms">
+                <div class="container">
+                    <div class="return-and-exchange-terms__item">
+                        <div class="item__content">
+                            <h2>УСЛОВИЯ ВОЗВРАТА И ОБМЕНА</h2>
+                            <p>Обмен товара надлежащего качества производится в течение четырнадцати дней, не считая дня
+                                его покупки. Обмен товара надлежащего качества проводится, если указанный товар не был в
+                                употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные
+                                ярлыки, а также имеется товарный чек или кассовый чек либо иной подтверждающий оплату
+                                указанного товара документ.</p>
+                        </div>
+                        <div class="item__photo">
+                            <img src="./assets/img/about-us/money.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="return-and-exchange-terms__item">
+                        <div class="item__photo">
+                            <img src="./assets/img/about-us/section.jpg" alt="">
+                        </div>
+                        <div class="item__content">
+                            <p>В случае, если аналогичный товар отсутствует в продаже на день обращения, Вы вправе
+                                отказаться от исполнения договора купли-продажи и потребовать возврата уплаченной за
+                                указанный товар денежной суммы. Требование о возврате уплаченной за указанный товар
+                                денежной суммы подлежит удовлетворению в течение трех дней со дня возврата указанного
+                                товара. При оплате за товар картой возврат переведенных средств, производится на Ваш
+                                банковский счет в течение 5—30 рабочих дней (срок зависит от Банка, который выдал Вашу
+                                банковскую карту).</p>
+                        </div>
+                    </div>
+                    <div class="return-and-exchange-terms__item">
+                        <div class="item__content w-100">
+                            <p>
+                                По соглашению сторон обмен товара может быть предусмотрен при поступлении аналогичного
+                                товара в продажу. Продавец обязан незамедлительно сообщить потребителю о поступлении
+                                аналогичного товара в продажу.
+                            </p>
+                            <p>
+                                Обмену не подлежат товары надлежащего качества указанные в Перечне непродовольственных
+                                товаров надлежащего качества, не подлежащих возврату или обмену, утвержденном
+                                Постановлением Правительства РФ от 19.01.1998 № 55. Основание: Закон РФ «О защите прав
+                                потребителя» от 07.02.92г. № 2300-1 (статья 25)
+                            </p>
+                            <p>
+                                Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид,
+                                потребительские свойства, а также документ, подтверждающий факт и условия покупки
+                                указанного товара (в случае, если товар был оплачен банковским переводом, и ООО «Лесной
+                                Магазин» подтвердило факт поступление оплаты, документ подтверждающий оплату не
+                                требуется). Потребитель не вправе отказаться от товара надлежащего качества, имеющего
+                                индивидуально-определенные свойства, если указанный товар может быть использован
+                                исключительно приобретающим его потребителем.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Back Call -->
+            <section class="back-call">
+                <div class="container">
+                    <div class="back-call__wrapper">
+                        <form action="#" class="back-call__form">
+                            <h2 class="back-call__title">Обратный звонок</h2>
+                            <label>
+                                <span class="form__title">Имя</span>
+                                <input type="text" placeholder="Имя" />
+                            </label>
+                            <label>
+                                <span class="form__title">Телефон</span>
+                                <input type="text" placeholder="+ 7" />
+                            </label>
+                            <button class="back-call__btn">Отправить</button>
+                        </form>
+                        <div class="back-call__content">
+                            <h2>Обратный звонок</h2>
+                            <p>
+                                Оставьте заявку на обратный звонок на нашем сайте - мы
+                                свяжемся с вами в удобное время, чтобы ответить на все ваши
+                                вопросы. Просто заполните форму с вашим именем, номером
+                                телефона и удобным временем звонка.
+                            </p>
+                            <b>Быстро и удобно!</b>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__header">
+                        <div class="footer__left">
+                            <a href="index.html">
+                                <img src="./assets/img/main/logotype_white.png" alt="Logo" />
+                            </a>
+                            <div class="navigation">
+                                <a href="#">О компании</a>
+                                <a href="#">Доставка и услуги</a>
+                            </div>
+                        </div>
+                        <div class="footer__right">
+                            <a href="tel:+74957747285">+7 495 774-72-85</a>
+                            <address><span>г.Москва,</span> ул. Адмирала Корнилова, вл7</address>
+                        </div>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Обрезной пиломатериал</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Строганый пиломатериал</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Лиственницы</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">Фанера</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                        <div class="navigation__items">
+                            <h4 class="navigations__items-title">
+                                <a href="#">OSB</a>
+                            </h4>
+                            <ul class="navigation__list">
+                                <li><a href="#">Брус</a></li>
+                                <li><a href="#">Брусок</a></li>
+                                <li><a href="#">Доска Обрезная</a></li>
+                                <li><a href="#">Доска обрезная - осина</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="footer__copyright">© 2001 – 2023 lesnoy-magazin.ru</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
+        integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

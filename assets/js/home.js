@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+
+    /* Main slider */
+    $("#main-slider").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3500,
+        nav: false,
+        dots: false,
+        slideSpeed: 1000,
+        items: 1,
+        singleItems: true,
+        animateOut: 'fadeOut',
+        lazyLoad: true,
+    });
+
+
     // TOP Sales-slider 
     $("#top-sales__slider").owlCarousel({
         loop: true,
@@ -29,20 +45,6 @@ $(document).ready(function () {
         }
     });
 
-
-    $("#main-slider").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3500,
-        autoplayHoverPause: true,
-        nav: false,
-        dots: false,
-        slideSpeed: 1000,
-        items: 1,
-        singleItems: true,
-        animateOut: 'fadeOut'
-    });
-
 })
 
 
@@ -65,6 +67,10 @@ function addRotationEffect() {
 addRotationEffect();
 
 
+if (window.innerWidth < 1200) {
+    const sortImg = document.querySelector('.sort__img');
+    sortImg.remove();
+  }
 
 
 /* function handleWindowResize() {
@@ -89,3 +95,15 @@ window.addEventListener('resize', handleWindowResize);
 
 // Вызываем функцию handleWindowResize() при загрузке страницы
 handleWindowResize(); */
+
+
+function closeDiscount() {
+    const discount = document.querySelector("#discount");
+    const iconX = document.querySelector(".icon-x");
+
+    iconX.addEventListener('click', () => {
+        discount.remove();
+    })
+}
+
+closeDiscount()
